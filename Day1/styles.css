@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.generate{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem;
+    gap: 1rem;
+}
+
+button{
+    padding: 5px 15px;
+    background-color: beige;
+    border-radius: 5px;
+}
+
+button:hover{
+    scale: 1.2;
+    background-color: rgb(240, 240, 168);
+    transition-duration: 0.5s;
+}
+
+#pandaImg{
+    display: none;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: aqua;
+    padding: 10px 5rem;
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+nav img{
+    width: 30px;
+    height: auto;
+}
+
+nav ul{
+    display: flex;
+    text-decoration: none;
+    list-style: none;
+    gap: 3rem;
+}
+
+table,td,th {
+    border: 1px solid black;
+}
+
+.courseList{
+    padding-left: 1.3rem;
+}
+
+iframe{
+    margin-left: 200px;
+    margin-bottom: 50px;
+}
+
+.formcontainer{
+    margin-bottom: 5rem;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    border: 1px solid black;
+    width: fit-content;
+    padding: 1rem;
+    font-size: large;
+    margin: 0 auto;
+}

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Engineering Basics</title>
+    <link rel="stylesheet" href="./styles.css">
+
+</head>
+
+<body>
+
+    <nav>
+        <img src="./christmas-decoration.png" alt="">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+
+    <h1>TEST</h1>
+    <h2>TEST</h2>
+    <h3>TEST</h3>
+    <h4>TEST</h4>
+    <h5>TEST</h5>
+    <h6>TEST</h6>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum delectus aspernatur maxime cum sapiente eum fuga
+        tempora dolor praesentium iste?</p>
+
+    <div class="generate">
+        <button>Click here to see a panda</button>
+        <img src="https://cdn.abcotvs.com/dip/images/15429154_qing-bao-img.jpg?w=1600" alt="PandaIMG" width="500px"
+            id="pandaImg">
+    </div>
+
+    <!-- SIR -->
+
+    <table>
+        <tr>
+            <th colspan="2">
+                Personal Details
+            </th>
+            <th>
+                Academic Details
+            </th>
+
+        </tr>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Course Details</th>
+        </tr>
+        <tr>
+            <td>213-15-4243</td>
+            <td>Md. Iftekhar Rahman Likhan</td>
+            <td class="courseList">
+                <ul>
+                    <li>Bangla</li>
+                    <li>English</li>
+                    <li>Math</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>213-15-4243</td>
+            <td>Md. Iftekhar Rahman Likhan</td>
+            <td class="courseList">
+                <ul>
+                    <li>Bangla</li>
+                    <li>English</li>
+                    <li>Math</li>
+                </ul>
+            </td>
+        </tr>
+        </tr>
+        <tr>
+            <td>213-15-4243</td>
+            <td>Md. Iftekhar Rahman Likhan</td>
+            <td class="courseList">
+                <ul>
+                    <li>Bangla</li>
+                    <li>English</li>
+                    <li>Math</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>213-15-4243</td>
+            <td>Md. Iftekhar Rahman Likhan</td>
+            <td class="courseList">
+                <ul>
+                    <li>Bangla</li>
+                    <li>English</li>
+                    <li>Math</li>
+                </ul>
+            </td>
+        </tr>
+        
+    </table>
+
+    <h1>IFRAME PRACTICE</h1>
+    <iframe src="./iframe.html" frameborder="0" width="500px" height="500px"></iframe>
+
+    <br><br><br>
+
+    <div class="formcontainer">
+        <h3 style="text-align: center; margin-bottom:1rem">FILLUP THIS FORM</h3>
+        <form action="" id="form">
+            <div class="entrycontainer">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" autocomplete="additional-name">
+            </div>
+
+            <div class="entrycontainer">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" autocomplete="email">
+            </div>
+            <input type="submit">
+        </form>
+    </div>
+
+    <h1 id="showName"></h1>
+
+
+
+
+
+
+    <!-- JS CODE -->
+    <script>
+        const pandaDisplay = ['none','block']
+        let pandaDisplayValue = false;
+
+        let panda = document.getElementById('pandaImg');
+        const button = document.querySelector('button');
+        button.addEventListener('click', () => {
+            
+            console.log(pandaDisplayValue);
+            pandaDisplayValue =  !pandaDisplayValue;
+
+            if(pandaDisplayValue===true){
+                panda.style.display='block';
+            }
+            else{
+                panda.style.display='none';
+            }
+        });
+
+// FORM HANDLING
+
+        document.getElementById('form').addEventListener("submit", (event) => {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData.entries());
+            console.log("Form Data: ",data)
+            const showNameH1 = document.getElementById("showName");
+            showNameH1.innerText = `${data.name}`;
+        })
+
+        
+
+    </script>
+
+
+</body>
+
+</html>
